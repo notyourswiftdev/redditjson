@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A20FAD7274F004F00D2B086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAD6274F004F00D2B086 /* AppDelegate.swift */; };
 		1A20FAD9274F004F00D2B086 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */; };
-		1A20FADB274F004F00D2B086 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FADA274F004F00D2B086 /* ViewController.swift */; };
-		1A20FADE274F004F00D2B086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A20FADC274F004F00D2B086 /* Main.storyboard */; };
 		1A20FAE0274F005300D2B086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A20FADF274F005300D2B086 /* Assets.xcassets */; };
 		1A20FAE3274F005300D2B086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		1A20FAD3274F004F00D2B086 /* redditjson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redditjson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A20FAD6274F004F00D2B086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A20FADA274F004F00D2B086 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A20FADD274F004F00D2B086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A20FADF274F005300D2B086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A20FAE2274F005300D2B086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A20FAE4274F005300D2B086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,29 @@
 		1A20FAD5274F004F00D2B086 /* redditjson */ = {
 			isa = PBXGroup;
 			children = (
+				1A20FAEB274F00C400D2B086 /* Assets */,
+				1A20FAEA274F00BF00D2B086 /* Resources */,
+			);
+			path = redditjson;
+			sourceTree = "<group>";
+		};
+		1A20FAEA274F00BF00D2B086 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1A20FAD6274F004F00D2B086 /* AppDelegate.swift */,
 				1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */,
-				1A20FADA274F004F00D2B086 /* ViewController.swift */,
-				1A20FADC274F004F00D2B086 /* Main.storyboard */,
-				1A20FADF274F005300D2B086 /* Assets.xcassets */,
 				1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */,
 				1A20FAE4274F005300D2B086 /* Info.plist */,
 			);
-			path = redditjson;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A20FAEB274F00C400D2B086 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1A20FADF274F005300D2B086 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,6 @@
 			files = (
 				1A20FAE3274F005300D2B086 /* LaunchScreen.storyboard in Resources */,
 				1A20FAE0274F005300D2B086 /* Assets.xcassets in Resources */,
-				1A20FADE274F004F00D2B086 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A20FADB274F004F00D2B086 /* ViewController.swift in Sources */,
 				1A20FAD7274F004F00D2B086 /* AppDelegate.swift in Sources */,
 				1A20FAD9274F004F00D2B086 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A20FADC274F004F00D2B086 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A20FADD274F004F00D2B086 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,12 +291,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = redditjson/Info.plist;
+				INFOPLIST_FILE = redditjson/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +307,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,12 +320,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = redditjson/Info.plist;
+				INFOPLIST_FILE = redditjson/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
