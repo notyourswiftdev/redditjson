@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 // https://www.reddit.com/.json
 
 struct Feed: Codable {
-    var image: String
-    var title: String
-    var commentNumber: String
-    var scoreAPI: String
+    var title: String?
+    var thumbnail: String?
+    var numComments: Int?
+    var score: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case numComments = "num_comments"
+    }
 }
