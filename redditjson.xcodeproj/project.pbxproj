@@ -11,6 +11,12 @@
 		1A20FAD9274F004F00D2B086 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */; };
 		1A20FAE0274F005300D2B086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A20FADF274F005300D2B086 /* Assets.xcassets */; };
 		1A20FAE3274F005300D2B086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */; };
+		1A20FAED274F016C00D2B086 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAEC274F016C00D2B086 /* FeedViewController.swift */; };
+		1A20FAEF274F017100D2B086 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAEE274F017100D2B086 /* FeedRouter.swift */; };
+		1A20FAF1274F017500D2B086 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF0274F017500D2B086 /* FeedInteractor.swift */; };
+		1A20FAF3274F017D00D2B086 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF2274F017D00D2B086 /* Builder.swift */; };
+		1A20FAF5274F018400D2B086 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF4274F018400D2B086 /* FeedPresenter.swift */; };
+		1A20FAF7274F018A00D2B086 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF6274F018A00D2B086 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		1A20FADF274F005300D2B086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A20FAE2274F005300D2B086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A20FAE4274F005300D2B086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A20FAEC274F016C00D2B086 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1A20FAEE274F017100D2B086 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		1A20FAF0274F017500D2B086 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		1A20FAF2274F017D00D2B086 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		1A20FAF4274F018400D2B086 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		1A20FAF6274F018A00D2B086 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +64,11 @@
 		1A20FAD5274F004F00D2B086 /* redditjson */ = {
 			isa = PBXGroup;
 			children = (
-				1A20FAEB274F00C400D2B086 /* Assets */,
+				1A20FAF9274F727300D2B086 /* App */,
+				1A20FAFA274F728300D2B086 /* Modules */,
+				1A20FAFC274F72EB00D2B086 /* Common */,
 				1A20FAEA274F00BF00D2B086 /* Resources */,
+				1A20FAFB274F72AF00D2B086 /* Supporting Files */,
 			);
 			path = redditjson;
 			sourceTree = "<group>";
@@ -61,20 +76,63 @@
 		1A20FAEA274F00BF00D2B086 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A20FAD6274F004F00D2B086 /* AppDelegate.swift */,
-				1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */,
-				1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */,
-				1A20FAE4274F005300D2B086 /* Info.plist */,
+				1A20FADF274F005300D2B086 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1A20FAEB274F00C400D2B086 /* Assets */ = {
+		1A20FAF8274F077000D2B086 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				1A20FADF274F005300D2B086 /* Assets.xcassets */,
+				1A20FAEC274F016C00D2B086 /* FeedViewController.swift */,
+				1A20FAEE274F017100D2B086 /* FeedRouter.swift */,
+				1A20FAF0274F017500D2B086 /* FeedInteractor.swift */,
+				1A20FAF4274F018400D2B086 /* FeedPresenter.swift */,
 			);
-			path = Assets;
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		1A20FAF9274F727300D2B086 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1A20FAD8274F004F00D2B086 /* SceneDelegate.swift */,
+				1A20FAD6274F004F00D2B086 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1A20FAFA274F728300D2B086 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1A20FAF2274F017D00D2B086 /* Builder.swift */,
+				1A20FAF8274F077000D2B086 /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1A20FAFB274F72AF00D2B086 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A20FAE1274F005300D2B086 /* LaunchScreen.storyboard */,
+				1A20FAE4274F005300D2B086 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A20FAFC274F72EB00D2B086 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A70A9C227500A8400D77E8A /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A70A9C227500A8400D77E8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A20FAF6274F018A00D2B086 /* Feed.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A20FAEF274F017100D2B086 /* FeedRouter.swift in Sources */,
 				1A20FAD7274F004F00D2B086 /* AppDelegate.swift in Sources */,
+				1A20FAF1274F017500D2B086 /* FeedInteractor.swift in Sources */,
 				1A20FAD9274F004F00D2B086 /* SceneDelegate.swift in Sources */,
+				1A20FAF7274F018A00D2B086 /* Feed.swift in Sources */,
+				1A20FAED274F016C00D2B086 /* FeedViewController.swift in Sources */,
+				1A20FAF3274F017D00D2B086 /* Builder.swift in Sources */,
+				1A20FAF5274F018400D2B086 /* FeedPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = redditjson/Resources/Info.plist;
+				INFOPLIST_FILE = "redditjson/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -320,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = redditjson/Resources/Info.plist;
+				INFOPLIST_FILE = "redditjson/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
