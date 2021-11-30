@@ -11,14 +11,14 @@ import UIKit
 protocol FeedViewProtocol {
     var presenter: FeedPresenterProtocol? { get set }
     
-    func update(with feed: [Feed])
+    func update(with feed: [FeedData])
     func update(with error: String)
 }
 
 class FeedViewController: UIViewController, FeedViewProtocol {
     var presenter: FeedPresenterProtocol?
     
-    var feed: [Feed] = []
+    var feed: [FeedData] = []
     
     // MARK: - UIComponents -
     private lazy var feedTableView: UITableView = {
@@ -42,7 +42,7 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     
     // MARK: - Functions -
     private func configureUI() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
         
         configureDelegates()
     }
@@ -53,7 +53,7 @@ class FeedViewController: UIViewController, FeedViewProtocol {
     }
     
     // MARK: - Protocol Functions -
-    func update(with feed: [Feed]) {
+    func update(with feed: [FeedData]) {
         DispatchQueue.main.async {
             self.feed = feed
             self.feedTableView.reloadData()
@@ -65,6 +65,9 @@ class FeedViewController: UIViewController, FeedViewProtocol {
         DispatchQueue.main.async {
             self.feed = []
             self.feedTableView.isHidden = true
+            let alertController = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }

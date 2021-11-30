@@ -16,17 +16,19 @@ protocol FeedPresenterProtocol {
     var interactor: FeedInteractorProtocol? { get set }
     var view: FeedViewProtocol? { get set }
     
-    func interactorDidFetchFeed(with result: Result<[Feed], Error>)
+    func interactorDidFetchFeed(with result: Result<[FeedData], Error>)
 }
 
 class FeedPresenter: FeedPresenterProtocol {
     var router: FeedRouterProtocol?
-    
-    var interactor: FeedInteractorProtocol?
-    
+    var interactor: FeedInteractorProtocol? {
+        didSet {
+            interactor?.getFeed()
+        }
+    }
     var view: FeedViewProtocol?
     
-    func interactorDidFetchFeed(with result: Result<[Feed], Error>) {
+    func interactorDidFetchFeed(with result: Result<[FeedData], Error>) {
         switch result {
         case .success(let feed):
             view?.update(with: feed)

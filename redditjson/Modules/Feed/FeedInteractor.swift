@@ -9,6 +9,8 @@ import Foundation
 
 protocol FeedInteractorProtocol {
     var presenter: FeedPresenterProtocol? { get set }
+    
+    func getFeed()
 }
 
 class FeedInteractor: FeedInteractorProtocol {
@@ -25,8 +27,8 @@ class FeedInteractor: FeedInteractorProtocol {
             }
             
             do {
-                let feedEntity = try JSONDecoder().decode([Feed].self, from: data)
-                self.presenter?.interactorDidFetchFeed(with: .success(feedEntity))
+                let feedData = try JSONDecoder().decode(AllFeeds.self, from: data)
+                self.presenter?.interactorDidFetchFeed(with: .success(feedData.feedChildData.children.map { $0.data }))
             } catch {
                 self.presenter?.interactorDidFetchFeed(with: .failure(error))
             }

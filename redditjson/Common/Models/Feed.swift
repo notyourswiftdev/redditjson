@@ -10,13 +10,25 @@ import UIKit
 
 // https://www.reddit.com/.json
 
-struct Feed: Codable {
-    var title: String?
-    var thumbnail: String?
-    var numComments: Int?
-    var score: Int?
+struct AllFeeds: Codable {
+    let feedChildData: FeedChildData
 
     enum CodingKeys: String, CodingKey {
-        case numComments = "num_comments"
+        case feedChildData = "data"
     }
+}
+
+struct FeedChildData: Codable {
+    let children: [FeedChild]
+}
+
+struct FeedChild: Codable {
+    let data: FeedData
+}
+
+struct FeedData: Codable {
+    let score: Int
+    let thumbnail: String
+    let title: String
+    let numComments: Int
 }

@@ -17,6 +17,7 @@
 		1A20FAF3274F017D00D2B086 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF2274F017D00D2B086 /* Builder.swift */; };
 		1A20FAF5274F018400D2B086 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF4274F018400D2B086 /* FeedPresenter.swift */; };
 		1A20FAF7274F018A00D2B086 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20FAF6274F018A00D2B086 /* Feed.swift */; };
+		1AE504C227558468002547C4 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE504C127558468002547C4 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1A20FAF2274F017D00D2B086 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		1A20FAF4274F018400D2B086 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		1A20FAF6274F018A00D2B086 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		1AE504C127558468002547C4 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		1A20FAF8274F077000D2B086 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				1AE504C02755844E002547C4 /* FeedTableView */,
 				1A20FAEC274F016C00D2B086 /* FeedViewController.swift */,
 				1A20FAEE274F017100D2B086 /* FeedRouter.swift */,
 				1A20FAF0274F017500D2B086 /* FeedInteractor.swift */,
@@ -133,6 +136,14 @@
 				1A20FAF6274F018A00D2B086 /* Feed.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1AE504C02755844E002547C4 /* FeedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1AE504C127558468002547C4 /* FeedTableViewCell.swift */,
+			);
+			path = FeedTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				1A20FAF7274F018A00D2B086 /* Feed.swift in Sources */,
 				1A20FAED274F016C00D2B086 /* FeedViewController.swift in Sources */,
 				1A20FAF3274F017D00D2B086 /* Builder.swift in Sources */,
+				1AE504C227558468002547C4 /* FeedTableViewCell.swift in Sources */,
 				1A20FAF5274F018400D2B086 /* FeedPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
@@ -369,6 +382,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaroncleveland.redditjson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -380,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7G4A2JWWKQ;
@@ -398,6 +413,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaroncleveland.redditjson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
